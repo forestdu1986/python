@@ -1,14 +1,7 @@
-class A:
-    def pa(self):
-        print ("AA")
-        
-    class A1:
-        self.c = 1
-        
-    class A2:
-        a1 = A1()
-        print (a1.c)
-        def pa2(self):
-            self.a11 = self.A1()
-        
-a = A()
+import shelve
+
+s=shelve.open("test.dat")
+#s[u"杜林"]=u"浙AF117D"
+for i in s:
+    print(i, s[i])
+s.close()
